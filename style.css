@@ -1,0 +1,470 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 20px;
+}
+.mbody{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    min-width: 100%;
+    
+}
+.banner{
+    background-color: rgb(51, 51, 51);
+    min-height: 450px;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul{
+    display: flex;
+    list-style: none;
+    margin: 15px 0;
+    
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.nav ul li a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+.nav a:hover{
+    border-bottom: 3px solid yellowgreen;
+    color: rgb(180, 197, 145);
+}
+
+.logo{   
+    width: 100px;
+    height: 50px;
+    position: relative;
+    transition: 3s;
+
+}
+.logo span::before{
+    content: 'E O';
+    font-size: 30px;
+    font-weight: bold;
+    font-family: fantasy; 
+    transition: 4s;  
+    
+}
+.logo span:hover::before{
+    content: 'Emmanuel Odile';
+    
+}
+.logo:hover{
+    
+    width: 200px;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    margin: 5% 25%;
+    text-align: right;
+}
+.mainpic{
+    background-image: url(pictures/file.png);
+    background-color: yellowgreen;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px 50px 200px 0;
+    min-width: 350px;
+    min-height: 350px;
+    transition: 0.5s;
+    margin: 0 5px;
+    
+}
+.mainpic:hover{
+    border-radius: 200px 0 100px 50px;
+}
+.herotext{
+    margin: 40px 0;
+    color: white;
+}
+.hero p{
+    font-size: 15px;
+    color: rgb(218, 220, 222);
+}
+.hero h1{
+    font-size: 45px;
+}
+.herospan1{
+    color: yellowgreen;
+}
+.herospan2{
+    position: relative;
+    font-size: 40px;
+}
+.herospan2::before{
+    content: "WEB DEV";
+    color: yellowgreen;
+    font-weight: bold;
+    font-family: fantasy;
+    animation: words 20s infinite;
+}
+.herospan2::after{
+    content: "";
+    background-color: rgb(51, 51, 51);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: calc(100% + 5px) ;
+    border-left: 6px solid rgb(51, 51, 51);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid orange;
+    }
+}
+
+@keyframes words{
+    0%,
+    20%{
+        content: "WEB DEVELOPER";
+    }
+    21%,
+    40%{
+        content: "3D Motion Artist";
+    }
+    41%,
+    60%{
+        content: "ML DEVELOPER";
+    }
+    61%,
+    80%{
+        content: "Graphics DESIGN";
+    }
+    81%,
+    100%{
+        content: "Content creator";
+    }
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+.hero button{
+    width: 150px;
+    padding: 10px 0;
+    border: 3px solid yellowgreen;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px 20px 0 0;
+    margin: 20px 20%;
+    transition: 0.2s;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+.hero button span{
+    height: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: yellowgreen;
+    border-radius: 20px 20px 0 0;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.hero button:hover span{
+    height: 100%;
+    border: 2px solid yellowgreen;
+}
+.service-sec{
+    background-color: rgb(55, 55, 55);
+    min-height: 300px;
+    text-align: center;
+    padding: 50px 30px;
+    color: white;
+}
+.s-head h3{
+    font-size: 13px;
+    font-weight: bolder;
+    color: yellowgreen;
+}
+.serv-boxs{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: 3% 10%;
+    color: white;
+}
+.serv-gen{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(20, 20, 20);
+    padding: 20px;
+    position: relative;
+    border-radius: 10px 0;
+    z-index: 1;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.serv-gen span{
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgb(168, 209, 86);
+    border-radius: 10px 0;
+    transition: 0.5s;
+    z-index: -1;
+    
+}
+.serv-gen:hover span{  
+    height: 100%;
+    width: 100%;  
+}
+.serv-gen p{
+    left: 25%;
+    top: 50%;
+    position: absolute;
+}
+.serv-box1 h1{
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+span{
+    color: yellowgreen;
+}
+.showcase h3{
+    color: yellowgreen;
+    font-size: 15px;
+}
+.case-content{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 30px 25%;
+}
+#image,#img2{
+    width: 300px;
+    border-radius: 20px 0;
+    transition: 0.2s;
+
+}
+#image:hover,#img2:hover{
+    width: 310px;
+}
+#wd-id h1{
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.me{
+    background-color: rgb(51, 51, 51);
+    min-height: 200px;
+    text-align: center;
+    padding: 40px 0;
+}
+.slide{
+    position: relative;
+    width: 33.8%;
+    margin: 70px 33%;
+}
+.mySlides{
+    width: 500px;
+
+}
+.display-left{
+    padding: 30px 20px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    color: white;
+    border: none;
+    background-color: yellowgreen;
+}
+.display-right{
+    padding: 30px 20px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    color: white;
+    border: none;
+    background-color: yellowgreen;
+}
+.me-div p{
+    color: yellowgreen;
+    font-size: 15px;
+    font-weight: bold;
+}
+.contact{
+    display: flex;
+    background-color: yellowgreen;
+    padding: 6px 10px;
+    border-radius: 20px 0;
+    color: white;
+}
+.cont{
+    margin: 40px 0;
+}
+.all-cont{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin: 20px 30%;
+}
+.all-cont h4{
+    margin: 7px 0;
+}
+.cont p{
+    color: yellowgreen;
+    font-weight: bold;
+    font-size: 12px;
+}
+.cont h3{
+    color: white;
+    font-weight: bold;
+    
+}
+footer p{
+    color: yellowgreen;
+}
+.apps{
+    margin: 20px 0;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+}
+.app{
+   height: 50px;
+    width: 70px;
+    transition: 0.5s;
+}
+.app:hover{
+    height: 55px;
+    width: 75px;
+}
+
+@media screen and (max-width: 600px) 
+{
+    .mbody{
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        min-width: 700px;   
+        padding: 0 10px;
+    }
+    .banner{
+        background-color: rgb(51, 51, 51);
+        padding: 30px;
+        border-radius: 20px 20px 0 0;
+    }
+    .hero{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: 5% 5%;
+        text-align: right;
+    }
+    .mainpic{
+        
+        background-size: cover;
+        background-position: center;
+        min-width: 250px;
+        min-height: 150px;
+       
+        
+        
+    }
+    .serv-boxs{
+        display: block;
+        justify-content: space-around;
+        margin: 50px 1%;
+    }
+    .serv-gen{
+        margin: 20px 0;
+
+    }
+    .all-servs{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .case-content{
+        display: block;
+    }
+    #image, #img2{
+        width: 250px;
+        margin: 50px 0;
+    }
+    .showcase{
+        margin: 25% 0;
+    }
+    .slide{
+        margin: 20px 13%;
+        width: 71.5%;
+    }
+    .display-left{
+        left: 0;
+    }
+    .display-right{
+        right: 0;
+    }
+    .contact{
+        display: flex;
+        background-color: yellowgreen;
+        padding: 6px 5px;
+        height: 50px;
+        border-radius: 20px 0;
+        color: white;
+    }
+    .all-cont{
+        margin: 20px 5%;
+        width: 80%;
+    }
+    .app{
+        height: 50px;
+         width: 70px;
+         transition: 0.5s;
+     }
+     .apps{
+        margin: 20px 0;
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+    }
+}

@@ -396,8 +396,8 @@ footer p{
     .hero{
         display: flex;
         justify-content: space-between;
-        width: 95%;
-        margin: 5% 5%;
+        width: 99%;
+        margin: 5% 3%;
         text-align: right;
     }
     .mainpic{

@@ -467,4 +467,7 @@ footer p{
         width: 40%;
         justify-content: space-between;
     }
+    .herospan2{
+        font-size: 30px;
+    }
 }
